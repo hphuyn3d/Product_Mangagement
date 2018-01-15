@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import { IProduct } from './product';
+import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component ({
     selector: 'pm-products',
@@ -7,7 +8,7 @@ import { IProduct } from './product';
     styleUrls: ['./product-list.component.css']
 })
 
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
@@ -67,5 +68,8 @@ export class ProductListComponent {
     ];
      toggleImage(): void {
         this.showImage = !this.showImage;
+    }
+    ngOnInit(): void {
+        console.log('init');
     }
 }
