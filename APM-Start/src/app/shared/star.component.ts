@@ -6,6 +6,7 @@ import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core
     templateUrl: './star.component.html',
     styleUrls: ['./star.component.css']
 })
+// tslint:disable-next-line:one-line
 export class StarComponent implements OnChanges{
     @Input() rating: number;
     starWidth: number;
